@@ -23,7 +23,8 @@ nm_cliente varchar(25) not null,
 nm_sobrenome varchar(25) not null,
 nm_email varchar(80),
 nr_telefone varchar(13),
-nm_endereco varchar(45) not null
+nm_endereco varchar(45) not null,
+nr_endereco int
 );
 
 /* Criação da Tabela - Fornecedor: */
@@ -33,5 +34,6 @@ nm_fornecedor varchar(25) not null,
 nm_contato varchar(45),
 nm_email varchar(80),
 nr_telefone varchar(13),
-nm_endereco varchar(25) not null
+nm_endereco varchar(25) not null,
+nr_endereco int
 );
