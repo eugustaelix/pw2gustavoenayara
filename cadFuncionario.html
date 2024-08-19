@@ -7,32 +7,51 @@
     <link rel="shortcut icon" type="imagex/png" href="icone.ico">
     <link rel="stylesheet" href="stylecadFuncionario.css">
     <title>Cadastro | Funcionário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div class="topnav">
-        <a href="cadCliente.html">Cliente</a>
-        <a href="cadFuncionario.html" id="navfuncionario" class="active">Funcionário</a>
+    <div class="cabecalho">
+        <a href="cadCliente.html" id="navcliente">Cliente</a>
+        <a href="cadFuncionario.html" class="active" id="navfuncionario">Funcionário</a>
         <a href="cadFornecedor.html" id="navfornecedor">Fornecedor</a>
-        <a>Orçamento</a>
-        <a>Sair</a>
+        <a href="cadOrcamento.html" id="navorcamento">Orçamento</a>
+        <a href="logout.html" id="navsair">Sair</a>
     </div>
-    <img src="imgcadFuncionario/imagem.png" class="mulher">
+    <img src="imgcadFuncionario/menina_violino.png" class="menina_violino">
+    <img src="imgcadFuncionario/forma_abstrata.png" class="forma_abstrata">
+    <div class="desfoque"></div>
     <div class="caixa">
+        <img src="imgcadFuncionario/notas_musicais.png" class="notas_musicais">
         <div class="container">
             <div class="titulo">
                 <label class="cadastro">CADASTRO</label>
                 <hr>
                 <label class="funcionario">FUNCIONÁRIO</label>
             </div>
-            <div class="primeironomeesobrenome">
+            <label for="primeironome" id="txtprimeironome" class="texto">Primeiro Nome: </label>
+            <label for="sobrenome" id="txtsobrenome" class="texto">Sobrenome: </label>
+            <div class="doiscampos">
                 <input type="text" class="campo" id="primeironome" placeholder="Primeiro Nome" />
                 <input type="text" class="campo" id="sobrenome" placeholder="Sobrenome" />
             </div>
-            <input type="text" class="campo" id="datadenascimento" placeholder="Data de Nacimento" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+            <label for="datadenascimento" class="texto">Data de Nascimento: </label>
+            <input type="text" class="campo" id="datadenascimento" placeholder="Data de Nacimento"
+                onfocus="(this.type='date')" onblur="(this.type='text')" />
+
+            <label for="cargo" class="texto">Cargo: </label>
             <input type="text" class="campo" id="cargo" placeholder="Cargo" />
+            <label for="salario" class="texto">Salário: </label>
             <input type="number" class="campo" id="salario" placeholder="Salário" />
-            <input type="text" class="campo" id="datadeadmissao" placeholder="Data de Admissão"  onfocus="(this.type='date')" onblur="(this.type='text')"/>
-            <input type="text" class="campo" id="senha" placeholder="Senha" />
+            <label for="datadeadmissao" class="texto">Data de Admissão: </label>
+            <input type="text" class="campo" id="datadeadmissao" placeholder="Data de Admissão"
+                onfocus="(this.type='date')" onblur="(this.type='text')" />
+            <label for="senha" class="texto">Senha: </label>
+            <input type="password" class="campo" id="senha" placeholder="Senha" />
             <br />
 
             <div class="botoes">
@@ -41,10 +60,28 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="rodape">
         <p>Feito por: Gustavo Felix Ferreira da Silva & Nayara Aparecida Silva Fioraneli — 2MD2</p>
     </div>
     <img src="imgcadFuncionario/logo.png" class="logo" />
 </body>
 
 </html>
+<script>
+    document.querySelectorAll('.cabecalho a').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault(); 
+      
+          const currentActive = document.querySelector('.cabecalho a.active');
+          if (currentActive) {
+            currentActive.classList.remove('active');
+            link.classList.add('active');
+      
+            setTimeout(function() {
+              window.location.href = link.href; 
+            }, 100);
+          }
+        });
+      });
+    
+    </script>
