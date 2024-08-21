@@ -24,6 +24,11 @@ body {
   color: #4D0000;
 }
 
+select{
+  color: #4D0000 !important;
+  border-right: 16px solid transparent !important;
+}
+
 .forma_abstrata {
   z-index: 1;
   position: fixed;
@@ -33,11 +38,9 @@ body {
   transition: 1s ease-in-out;
 }
 
-
 .forma_abstrata:hover {
   filter: brightness(110%);
 }
-
 
 .notas_musicais {
   width: 130px;
@@ -94,7 +97,7 @@ body {
   transition: 1s;
 }
 
-.rodape:hover{
+.rodape:hover {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
@@ -203,31 +206,12 @@ body {
   margin-bottom: 5px;
 }
 
-.texto#txtprimeironome {
+.texto#nome {
   position: absolute;
   display: flex;
   justify-content: flex-start;
 }
 
-.texto#txtsobrenome {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  right: 140px;
-}
-
-.texto#txtendereco {
-  position: absolute;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.texto#txtnumero {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  right: 70px;
-}
 
 .campo {
   background-color: rgba(255, 255, 255, 0.6);
@@ -249,47 +233,38 @@ body {
   font-size: 20px !important;
 }
 
-.campo#primeironome {
-  background-image: url("imgcadCliente/pessoa.png");
-  width: 50%;
+.campo#descricao {
+  background-image: url("imgcadLancamentos/descricao.png");
+  height: 160px;
+  background-position-x: 15px;
+  background-position-y: 15px;
+  padding-top: 13px;
+  padding-right: 25px;
+  width: 409px;
+  max-height: 263px;
+  min-height: 160px;
+  max-width: 409px;
+  min-width: 409px;
+}
+
+.campo#valor {
+  background-image: url("imgcadLancamentos/moeda.png");
   margin-right: 10px;
   margin-left: 5px;
 }
 
-.campo#sobrenome {
-  background-image: url("imgcadCliente/pessoa.png");
-  width: 50%;
-  margin-left: 10px;
-  margin-right: 5px;
+.campo#tipo {
+  background-image: url("imgcadLancamentos/tipo.png");
+  margin-left: 5px;
+  width: 99%;
 }
 
-.campo#datadenascimento {
-  background-image: url("imgcadCliente/calendario.png");
-  padding-right: 2%;
-  width: 88%;
-  color: rgba(0, 0, 0, 0.6);
+.campo#datalancamento {
+  background-image: url("imgcadLancamentos/calendario.png");
+  margin-right: 10px;
+  margin-left: 5px;
   padding-right: 10px;
   width: 88%;
-}
-
-.campo#email {
-  background-image: url("imgcadCliente/email.png");
-}
-
-.campo#telefone {
-  background-image: url("imgcadCliente/telefone.png");
-}
-
-.campo#endereco {
-  background-image: url("imgcadCliente/endereco.png");
-  width: 75%;
-  margin-right: 10px;
-}
-
-.campo#numero {
-  width: 25%;
-  margin-left: 10px;
-  background-image: url("imgcadCliente/endereco.png");
 }
 
 .campo:focus {
@@ -306,15 +281,11 @@ body {
   letter-spacing: 10px;
 }
 
-.cliente {
+.categoria {
   font-size: 30px;
   text-shadow: 0px 0px 10px rgba(173, 22, 22, 0.15);
   font-weight: 300;
   letter-spacing: 5px;
-}
-
-.doiscampos {
-  display: flex;
 }
 
 .titulo {
@@ -327,4 +298,3 @@ hr {
   border-radius: 30px;
   width: 325px;
 }
-

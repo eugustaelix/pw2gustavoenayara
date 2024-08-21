@@ -253,6 +253,8 @@ body {
   padding-right: 2%;
   width: 88%;
   color: rgba(0, 0, 0, 0.6);
+  padding-right: 10px;
+  width: 88%;
 }
 
 .campo#cargo {
@@ -268,6 +270,8 @@ body {
   padding-right: 2%;
   width: 88%;
   color: rgba(0, 0, 0, 0.6);
+  padding-right: 10px;
+  width: 88%;
 }
 
 .campo#senha {
