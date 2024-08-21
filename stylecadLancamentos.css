@@ -253,11 +253,13 @@ select{
   margin-left: 5px;
 }
 
-.campo#tipo {
+.campo#tipo,
+.campo#categoria {
   background-image: url("imgcadLancamentos/tipo.png");
   margin-left: 5px;
   width: 99%;
 }
+
 
 .campo#datalancamento {
   background-image: url("imgcadLancamentos/calendario.png");
