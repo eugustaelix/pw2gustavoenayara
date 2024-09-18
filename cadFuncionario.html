@@ -29,36 +29,39 @@
     <div class="caixa">
         <img src="imgcadFuncionario/notas_musicais.png" class="notas_musicais">
         <div class="container">
-            <div class="titulo">
-                <label class="cadastro">CADASTRO</label>
-                <hr>
-                <label class="funcionario">FUNCIONÁRIO</label>
-            </div>
-            <label for="primeironome" id="txtprimeironome" class="texto">Primeiro Nome: </label>
-            <label for="sobrenome" id="txtsobrenome" class="texto">Sobrenome: </label>
-            <div class="doiscampos">
-                <input type="text" class="campo" id="primeironome" placeholder="Primeiro Nome" />
-                <input type="text" class="campo" id="sobrenome" placeholder="Sobrenome" />
-            </div>
-            <label for="datadenascimento" class="texto">Data de Nascimento: </label>
-            <input type="text" class="campo" id="datadenascimento" placeholder="Data de Nacimento"
-                onfocus="(this.type='date')" onblur="(this.type='text')" />
+            <form action="php/insert_funcionario.php" method="POST">
+                <div class="titulo">
+                    <label class="cadastro">CADASTRO</label>
+                    <hr>
+                    <label class="funcionario">FUNCIONÁRIO</label>
+                </div>
+                <label for="primeironome" id="txtprimeironome" class="texto">Primeiro Nome: </label>
+                <label for="sobrenome" id="txtsobrenome" class="texto">Sobrenome: </label>
+                <div class="doiscampos">
+                    <input type="text" class="campo" id="primeironome" name="nm_funcionario"
+                        placeholder="Primeiro Nome" />
+                    <input type="text" class="campo" id="sobrenome" name="nm_sobrenome" placeholder="Sobrenome" />
+                </div>
+                <label for="datadenascimento" class="texto">Data de Nascimento: </label>
+                <input type="text" class="campo" id="datadenascimento" name="dt_nascimento"
+                    placeholder="Data de Nacimento" onfocus="(this.type='date')" onblur="(this.type='text')" />
 
-            <label for="cargo" class="texto">Cargo: </label>
-            <input type="text" class="campo" id="cargo" placeholder="Cargo" />
-            <label for="salario" class="texto">Salário: </label>
-            <input type="number" class="campo" id="salario" placeholder="Salário" />
-            <label for="datadeadmissao" class="texto">Data de Admissão: </label>
-            <input type="text" class="campo" id="datadeadmissao" placeholder="Data de Admissão"
-                onfocus="(this.type='date')" onblur="(this.type='text')" />
-            <label for="senha" class="texto">Senha: </label>
-            <input type="password" class="campo" id="senha" placeholder="Senha" />
-            <br />
+                <label for="cargo" class="texto">Cargo: </label>
+                <input type="text" class="campo" id="cargo" name="nm_cargo" placeholder="Cargo" />
+                <label for="salario" class="texto">Salário: </label>
+                <input type="number" class="campo" id="salario" name="vl_salario" placeholder="Salário" />
+                <label for="datadeadmissao" class="texto">Data de Admissão: </label>
+                <input type="text" class="campo" id="datadeadmissao" name="dt_admissao" placeholder="Data de Admissão"
+                    onfocus="(this.type='date')" onblur="(this.type='text')" />
+                <label for="senha" class="texto">Senha: </label>
+                <input type="text" class="campo" id="senha" name="nm_senha" placeholder="Senha" />
+                <br />
 
-            <div class="botoes">
-                <input type="button" class="botao" value="Cancelar" />
-                <input type="button" class="botao" value="Cadastrar" />
-            </div>
+                <div class="botoes">
+                    <input type="button" class="botao" value="Cancelar" />
+                    <input type="submit" class="botao" value="Cadastrar" />
+                </div>
+            </form>
         </div>
     </div>
     <div class="rodape">
@@ -69,20 +72,20 @@
 
 </html>
 <script>
-    document.querySelectorAll('.cabecalho a').forEach(function(link) {
-        link.addEventListener('click', function(event) {
-          event.preventDefault(); 
-      
-          const currentActive = document.querySelector('.cabecalho a.active');
-          if (currentActive) {
-            currentActive.classList.remove('active');
-            link.classList.add('active');
-      
-            setTimeout(function() {
-              window.location.href = link.href; 
-            }, 100);
-          }
+    document.querySelectorAll('.cabecalho a').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const currentActive = document.querySelector('.cabecalho a.active');
+            if (currentActive) {
+                currentActive.classList.remove('active');
+                link.classList.add('active');
+
+                setTimeout(function () {
+                    window.location.href = link.href;
+                }, 100);
+            }
         });
-      });
-    
-    </script>
+    });
+
+</script>

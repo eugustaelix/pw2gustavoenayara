@@ -11,7 +11,7 @@ nm_funcionario varchar(25) not null,
 nm_sobrenome varchar(25) not null,
 dt_nascimento date not null,
 nm_cargo varchar(30) not null,
-vl_salario decimal(6,2) not null,
+vl_salario decimal(10,2) not null,
 dt_admissao date not null,
 nm_senha text
 );

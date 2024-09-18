@@ -29,29 +29,31 @@
     <div class="caixa">
         <img src="imgcadFornecedor/notas_musicais.png" class="notas_musicais">
         <div class="container">
-            <div class="titulo">
-                <label class="cadastro">CADASTRO</label>
-                <hr>
-                <label class="fornecedor">FORNECEDOR</label>
-            </div>
-            <label for="nome" id="txtnome" class="texto">Nome: </label>
-            <input type="text" class="campo" id="nome" placeholder="Nome" />
-            <label for="contato" class="texto">Contato: </label>
-            <input type="text" class="campo" id="contato" placeholder="Contato" />
-            <label for="email" class="texto">E-mail: </label>
-            <input type="text" class="campo" id="email" placeholder="E-mail" />
-            <label for="telefone" class="texto">Telefone: </label>
-            <input type="number" class="campo" id="telefone" placeholder="Telefone" />
-            <label for="endereco" id="txtendereco" class="texto">Endereço: </label>
-            <label for="numero" id="txtnumero" class="texto">Número: </label>
-            <div class="doiscampos">
-                <input type="text" class="campo" id="endereco" placeholder="Endereço" />
-                <input type="text" class="campo" id="numero" placeholder="Número" />
-            </div>
-            <div class="botoes">
-                <input type="button" class="botao" value="Cancelar" />
-                <input type="button" class="botao" value="Cadastrar" />
-            </div>
+            <form action="php/insert_fornecedor.php" method="POST">
+                <div class="titulo">
+                    <label class="cadastro">CADASTRO</label>
+                    <hr>
+                    <label class="fornecedor">FORNECEDOR</label>
+                </div>
+                <label for="nome" id="txtnome" class="texto">Nome: </label>
+                <input type="text" class="campo" id="nome" name="nm_fornecedor" placeholder="Nome" />
+                <label for="contato" class="texto">Contato: </label>
+                <input type="text" class="campo" id="contato" name="nm_contato" placeholder="Contato" />
+                <label for="email" class="texto">E-mail: </label>
+                <input type="text" class="campo" id="email" name="nm_email" placeholder="E-mail" />
+                <label for="telefone" class="texto">Telefone: </label>
+                <input type="number" class="campo" id="telefone" name="nr_telefone" placeholder="Telefone" />
+                <label for="endereco" id="txtendereco" class="texto">Endereço: </label>
+                <label for="numero" id="txtnumero" class="texto">Número: </label>
+                <div class="doiscampos">
+                    <input type="text" class="campo" id="endereco" name="nm_endereco" placeholder="Endereço" />
+                    <input type="text" class="campo" id="numero" name="nr_endereco" placeholder="Número" />
+                </div>
+                <div class="botoes">
+                    <input type="button" class="botao" value="Cancelar" />
+                    <input type="submit" class="botao" value="Cadastrar" />
+                </div>
+            </form>
         </div>
     </div>
     <div class="rodape">
@@ -62,20 +64,20 @@
 
 </html>
 <script>
-    document.querySelectorAll('.cabecalho a').forEach(function(link) {
-        link.addEventListener('click', function(event) {
-          event.preventDefault(); 
-      
-          const currentActive = document.querySelector('.cabecalho a.active');
-          if (currentActive) {
-            currentActive.classList.remove('active');
-            link.classList.add('active');
-      
-            setTimeout(function() {
-              window.location.href = link.href; 
-            }, 100);
-          }
+    document.querySelectorAll('.cabecalho a').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const currentActive = document.querySelector('.cabecalho a.active');
+            if (currentActive) {
+                currentActive.classList.remove('active');
+                link.classList.add('active');
+
+                setTimeout(function () {
+                    window.location.href = link.href;
+                }, 100);
+            }
         });
-      });
-    
-    </script>
+    });
+
+</script>
