@@ -13,4 +13,6 @@ values (null,'$Nome', '$Sobrenome', '$Email', '$Telefone', '$Endereco', '$Numero
 
 $resultado = $conexao->query($insert_cliente);
 
+header('Location: ../cadCliente.html');
+
 ?>

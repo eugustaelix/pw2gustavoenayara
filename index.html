@@ -12,17 +12,19 @@
 <body>
   <div class="caixa">
     <div class="container">
+      <form action="php/logon.php" method="post">
       <div class="input">
-        <label class="texto" for="email">E-mail:</label>
-        <input type="text" class="campo" id="email" placeholder="Digite seu e-mail" />
+        <label class="texto" for="id">ID:</label>
+        <input type="text" class="campo" id="id" name="id" placeholder="Digite seu ID" />
       </div>
       <div class="input">
         <label class="texto" for="senha">Senha:</label>
-        <input type="text" class="campo" id="senha" placeholder="Digite sua senha" />
+        <input type="text" class="campo" id="senha" name="senha" placeholder="Digite sua senha" />
       </div>
       <u class="ems">Esqueci minha senha</u>
       <br />
-      <a class="botao" href="cadFuncionario.html">Acessar</a>
+      <button class="botao" type="submit">Acessar</button>
+      </form>
     </div>
   </div>
   <div class="caixa2"></div>

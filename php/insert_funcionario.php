@@ -14,5 +14,6 @@ values (null,'$Nome', '$Sobrenome', '$Nascimento', '$Cargo', '$Salario', '$Admis
 
 $resultado = $conexao->query($insert_funcionario);
 
+header('Location: ../cadFuncionario.html');
 
 ?>

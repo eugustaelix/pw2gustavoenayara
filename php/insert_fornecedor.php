@@ -13,4 +13,5 @@ values (null,'$Nome', '$Contato', '$Email', '$Telefone', '$Endereco', '$Numero')
 
 $resultado = $conexao->query($insert_fornecedor);
 
+header('Location: ../cadFornecedor.html');
 ?>
