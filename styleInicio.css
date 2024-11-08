@@ -1,0 +1,242 @@
+/* Fonte: */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: "Cerebri Sans SemiBold";
+  src: url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.eot");
+  src: url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.svg#Cerebri Sans SemiBold")format("svg");
+}
+
+/* Estilo da página: */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+::placeholder {
+  color: #4D0000;
+}
+
+::-ms-input-placeholder {
+  color: #4D0000;
+}
+
+.forma_abstrata {
+  z-index: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: -webkit-fill-available;
+  transition: 1s ease-in-out;
+}
+
+
+.forma_abstrata:hover {
+  filter: brightness(110%);
+}
+
+.desfoque {
+  height: 500px;
+  bottom: 0;
+  position: absolute;
+  width: 45%;
+  background: #C9604C;
+  opacity: 0.15;
+  left: -30px;
+  border-radius: 300px;
+  filter: blur(50px);
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  left: 5px;
+  transition: 1s;
+}
+
+.logo:hover {
+  filter: brightness(150%);
+}
+
+.rodape {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.055);
+  transition: 1s;
+}
+
+.rodape:hover {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.cabecalho {
+  overflow: hidden;
+  justify-content: flex-end;
+  display: flex;
+  letter-spacing: 3px;
+  margin: 10px;
+  z-index: 3;
+  position: relative;
+  margin-right: 30px;
+}
+
+.cabecalho a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: none;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+}
+
+.cabecalho a:last-child,
+#navcategoria,
+#navlancamentos {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.cabecalho a:hover {
+  color: #AA0306;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+.cabecalho a.active {
+  color: white;
+  transition: 0.2s;
+  border-radius: 15px;
+  background: linear-gradient(216deg, rgba(242, 163, 94, 1) 67%, rgba(242, 112, 94, 1) 100%);
+  max-height: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  top: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.botao {
+  width: 40%;
+  height: 45px;
+  border-radius: 25px;
+  font-size: 15px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+  margin-left: 15px;
+  font-family: 'Inter';
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.container {
+  position: relative;
+  max-width: 850px;
+  top: -75px;
+}
+
+#titulo {
+  font-weight: 560;
+  font-size: 80px;
+  position: absolute;
+  left: 100px;
+  top: 250px;
+  font-family: "Cerebri Sans SemiBold";
+  text-shadow: 0px 0px 25px rgba(242, 112, 94, 0.23);
+}
+
+#subtitulo {
+  font-weight: 300;
+  font-size: 30px;
+  position: absolute;
+  left: 100px;
+  top: 450px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#btnCadastrarFuncionario {
+  left: 85px;
+  top: 540px;
+  position: relative;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+span {
+  background: linear-gradient(90deg, rgba(242, 163, 94, 1), rgba(242, 112, 94, 1), rgba(242, 163, 94, 1));
+  background-size: 200% 100%;
+  animation: gradientAnimation 3s linear infinite;
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.musicos {
+  width: 790px;
+  position: fixed;
+  left: 750px;
+  top: -45px;
+}
+
+.usuario {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 35px;
+  transition: 1s;
+}
+
+.usuario:hover {
+  filter: brightness(0) saturate(300%) invert(45%) sepia(100%) saturate(500%) hue-rotate(-10deg);
+  transform: rotate(360deg);
+}
+
+.olausuario{
+  left: 95px;
+  position: absolute;
+  top: 15px;
+  font-size: 25px;
+  font-family: 'Cerebri Sans SemiBold';
+  letter-spacing: 0px;
+  max-width: 355px;
+}

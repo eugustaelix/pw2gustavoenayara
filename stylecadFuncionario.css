@@ -1,0 +1,336 @@
+/* Fonte: */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: "Cerebri Sans SemiBold";
+  src: url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.eot");
+  src: url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/25aa37eee4a8a72fa7d2702b548cd843.svg#Cerebri Sans SemiBold")format("svg");
+}
+
+/* Estilo da página: */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+::placeholder {
+  color: #4D0000;
+}
+
+::-ms-input-placeholder {
+  color: #4D0000;
+}
+
+.forma_abstrata {
+  z-index: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: -webkit-fill-available;
+  transition: 1s ease-in-out;
+}
+
+.forma_abstrata:hover {
+  filter: brightness(110%);
+}
+
+.notas_musicais {
+  width: 130px;
+  height: 130px;
+  z-index: 3;
+  position: absolute;
+  top: -40px;
+  right: -30px;
+}
+
+.desfoque {
+  height: 500px;
+  bottom: 0;
+  position: absolute;
+  width: 45%;
+  background: #C9604C;
+  opacity: 0.15;
+  left: -30px;
+  border-radius: 300px;
+  filter: blur(50px);
+}
+
+.menina_violino {
+  top: 80px;
+  right: 250px;
+  width: 1100px;
+  position: absolute;
+}
+
+.rodape {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.055);
+  transition: 1s;
+}
+
+.rodape:hover{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.cabecalho {
+  overflow: hidden;
+  justify-content: flex-end;
+  display: flex;
+  letter-spacing: 3px;
+  margin: 10px;
+  z-index: 3;
+  position: relative;
+  margin-right: 30px;
+}
+
+.cabecalho a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: none;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+}
+
+.cabecalho a:last-child {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.cabecalho a:hover {
+  color: #AA0306;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+.cabecalho a.active {
+  color: white;
+  transition: 0.2s;
+  border-radius: 15px;
+  background: linear-gradient(216deg, rgba(242, 163, 94, 1) 67%, rgba(242, 112, 94, 1) 100%);
+  max-height: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  top: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.caixa {
+  background: linear-gradient(216deg, rgba(220, 146, 113, 0.15) 0%, rgba(199, 89, 71, 0.15) 92%);
+  width: 27%;
+  position: absolute;
+  top: 49%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(3px);
+}
+
+.container {
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+  text-align: center;
+  padding: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+.botoes {
+  margin-top: 15px;
+}
+
+.botao {
+  width: 40%;
+  height: 45px;
+  border-radius: 25px;
+  font-size: 15px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+  margin-left: 15px;
+  font-family: 'Inter';
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.botao:last-child {
+  margin-right: 10px;
+}
+
+.texto {
+  display: flex;
+  font-size: 16px;
+  margin-left: 8px;
+  margin-bottom: 5px;
+}
+
+.texto#txtprimeironome {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.texto#txtsobrenome {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  right: 140px;
+}
+
+.campo {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  width: 90%;
+  outline: none;
+  color: black;
+  height: 45px;
+  padding-left: 40px;
+  transition: 1s;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(173, 22, 22, 0.15);
+  margin-bottom: 10px;
+  background-size: 20px;
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 200;
+  font-size: 20px !important;
+}
+
+.campo#primeironome {
+  background-image: url("imgcadFuncionario/pessoa.png");
+  width: 50%;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.campo#sobrenome {
+  background-image: url("imgcadFuncionario/pessoa.png");
+  width: 50%;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.campo#datadenascimento {
+  background-image: url("imgcadFuncionario/calendario.png");
+  padding-right: 2%;
+  width: 88%;
+  color: rgba(0, 0, 0, 0.6);
+  padding-right: 10px;
+  width: 88%;
+}
+
+.campo#cargo {
+  background-image: url("imgcadFuncionario/mala.png");
+}
+
+.campo#salario {
+  background-image: url("imgcadFuncionario/moeda.png");
+}
+
+.campo#datadeadmissao {
+  background-image: url("imgcadFuncionario/calendario.png");
+  padding-right: 2%;
+  width: 88%;
+  color: rgba(0, 0, 0, 0.6);
+  padding-right: 10px;
+  width: 88%;
+}
+
+.campo#senha {
+  background-image: url("imgcadFuncionario/cadeado.png");
+}
+
+.campo:focus {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  transition: 1s;
+  color: black;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.cadastro {
+  font-size: 30px;
+  text-shadow: 0px 0px 10px rgba(173, 22, 22, 0.15);
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+.funcionario {
+  font-size: 30px;
+  text-shadow: 0px 0px 10px rgba(173, 22, 22, 0.15);
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+
+.doiscampos {
+  display: flex;
+}
+
+.titulo {
+  margin-bottom: 15px;
+  color: BLACK;
+}
+
+hr {
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 325px;
+}
+
+.usuario {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 35px;
+  transition: 1s;
+}
+
+.usuario:hover {
+  filter: brightness(0) saturate(300%) invert(45%) sepia(100%) saturate(500%) hue-rotate(-10deg);
+  transform: rotate(360deg);
+}
+
+.olausuario{
+  left: 95px;
+  position: absolute;
+  top: 15px;
+  font-size: 25px;
+  font-family: 'Cerebri Sans SemiBold';
+  letter-spacing: 0px;
+  max-width: 355px;
+}
